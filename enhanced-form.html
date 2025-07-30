@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced form</title>
+    <meta name="description" content="This si an enhaced html content with validations without javscript">
+</head>
+
+<body>
+
+    <!----------navigation area-->
+    <head>
+        <h1>Html validation</h1>
+        <nav aria-label="menu">
+            <ul>
+                <li><a href="#ordered_lists">Ordered Lists</a></li>
+                <li><a href="#unordered_lists">Unordered Lists</a></li>
+                <li><a href="#tables">Tables</a></li>
+                <li><a href="#media">Media</a></li>
+                <li><a href="#form_fields">Form</a></li>
+            </ul>
+        </nav>
+    </head>
+
+    <!-------start ot main content-->
+    <main>
+
+        <!-----section for ordered list-->
+        <section id="ordered_lists" class="lists">
+            <h2>Ordered lists of countries</h2>
+            <ol type="I" aria-label="list">
+                <li>Kenya</li>
+                <li>South Africa</li>
+                <li>Tanzania</li>
+                <li>Nigeris</li>
+                <li>DRC</li>
+                <li>Morocco</li>
+            </ol>
+        </section>
+
+        <!-------section for unordered list-->
+        <section id="unordered_lists" class="lists">
+            <h2>Unordered lists of countries</h2>
+            <ul aria-label="list">
+                <li>Kenya</li>
+                <li>South Africa</li>
+                <li>Tanzania</li>
+                <li>Nigeris</li>
+                <li>DRC</li>
+                <li>Morocco</li>
+            </ul>
+        </section>
+
+        <!--------section for tables-->
+        <section id="tables">
+            <h2>Table showing list of employees</h2>
+            <table border="1px solid black" style="border-collapse: collapse;" aria-label="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Phone number</th>
+                        <th>Department</th>
+                        <th colspan="4">Description/Room</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>James Kaimu</td>
+                        <td>+2547564356</td>
+                        <td>Lab</td>
+                        <td colspan="4">Third floor</td>
+                    </tr>
+                    <tr>
+                        <td>Rock star</td>
+                        <td>+2547564356</td>
+                        <td>Reception</td>
+                        <td colspan="4">Ground Floor</td>
+                    </tr>
+                    <tr>
+                        <td>Legacy Mathias</td>
+                        <td>+2547564356</td>
+                        <td>Finance</td>
+                        <td colspan="4">Second Floor</td>
+                    </tr>
+                    <tr>
+                        <td>Brenda Tomasi</td>
+                        <td>+2547564356</td>
+                        <td>Procurement</td>
+                        <td colspan="4">First Floor</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-----section for multimedia------>
+        <section id="media" aria-label="multimedia">
+            <h2>Section for multimedia</h2>
+            <video src="media/video.mp4" width="500px" height="350px" controls aria-label="video"></video>
+            <audio src="media/audio.mp3" controls autoplay aria-label="audio"></audio>
+            <img src="media/clock.jpg" alt="an image of an analog clock" width="150px" height="150px" aria-label="image">
+        </section>
+
+        <!------section for form fields-->
+        <section id="form_fields">
+            <h2>Form section area</h2>
+            <form action="" autocomplete="off" aria-label="form">
+                <fieldset style="display: flex; flex-direction: column;">
+                    <legend>Your Info</legend>
+                    <input type="number" readonly value="1" required>
+                    <label for="name">Full name</label>
+                    <input type="text" id="name" placeholder="enter name" pattern="^[A-Za-z]+ [A-Za-z]+$" minlength="3" maxlength="20" required>
+                    <label for="email">Full email</label>
+                    <input type="email"  id="email" placeholder="enter email" pattern="^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Enter a valid email" />
+                    <label for="password">password</label>
+                    <input type="password" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" title="Minimum 8 characters, at least one letter and one number" id="password" placeholder="enter password" required/>
+                    <label for="age">Age</label>
+                    <input type="number" id="age" placeholder="enter age" required maxlength="3" minlength="2">
+                    <label for="tel">Tel</label>
+                    <input type="tel" pattern="^07\d{8}$" title="Start with 07 and enter 10 digits total" />
+                    <label for="checkbox">Confirm</label>
+                    <input type="checkbox" id="checkbox" required>
+                    <input type="submit" value="submit" aria-label="submit">
+                </fieldset>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>
